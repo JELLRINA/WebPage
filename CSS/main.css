@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* 전체 선택자 */
+/* * {
+    border: 1px solid red;
+}  */
+/* 태그 선택자 */
+/* h1 {
+    border: 1px solid powderblue;
+}
+h2 {
+    border: 1px solid greenyellow;
+}
+h3 {
+    border: 1px solid blueviolet;
+} */
+/* 자손 선택자 */
+p strong {
+  border: 1px solid blue;
+}
+/* 자식 선택자 */
+ul > li {
+  border: 1px solid gray;
+}
+
+/* 그룹 선택자 */
+/* h1, h2, h3 {
+    border: 1px solid blue;
+}
+ ul li:nth-of-type(1) {
+    border: 1px solid red;
+}
+ul li:nth-of-type(2) {
+    border: 1px solid rgb(30, 155, 61);
+}
+ul li:nth-of-type(3) {
+    border: 1px solid rgb(165, 28, 192);
+}
+ul li:nth-of-type(4) {
+    border: 1px solid rgb(98, 47, 218);
+}
+
+ul li:nth-of-type(3n-1) {
+    border: 1px solid rgb(98, 47, 218);
+}  */
+
+/* ul li:last-child {
+    border: 1px solid purple;
+} */
+
+ul li:nth-of-type(odd) {
+  /*홀수 선택자*/
+  border: 1px solid plum;
+}
+ul li:nth-of-type(even) {
+  /* 짝수 선택자 */
+  border: 1px solid rgb(59, 36, 59);
+}
+
+input[type="text"] {
+  border: 1px solid blue;
+}
+input[type="password"] {
+  border: 1px solid red;
+}
+
+/* h1 {
+    border: 1px solid blue;
+}
+
+h1:hover{
+    border: 1px solid red;
+} */
+
+/* h1::before{
+    content: "before content";
+    border: 1px solid blue;
+}
+
+h1::after{
+    content: "after content";
+    border: 1px solid red;
+}
+
+p.text1 {
+    border: 1px solid blue;
+}
+.text2 {
+    border: 1px solid red;
+}
+
+#header {
+    border: 1px solid red;
+}
+#section {
+    border: 1px solid gray;
+}
+#footer {
+    border: 1px solid blue;
+} */
+
+/* h1 {
+  font-weight: normal;
+}
+p span {
+  font-weight: bold;
+}
+
+article h1 {
+  font-size: 60px;
+}
+article p {
+  font-size: 30px;
+}
+article a {
+  font-size: 15px;
+} */
+
+html {
+    font-size: 16px;
+}
+article h1{
+    font-size: 3rem;
+}
+article p{
+    font-size: 1rem;
+}
+article a{
+    font-size: 0.8rem;
+}
