@@ -207,3 +207,24 @@ article6-2 svg path {
 article6-2:hover svg path {
   stroke-dashoffset: 0;
 }
+
+/* 7 */
+article7 {
+  width: 200px;
+  height: 200px;
+  float: left;
+  background: pink;
+  margin: 100px auto;
+}
+/* 최대너비가 401-900이하일 때 배경색 */
+@media screen and (max-width: 900px) {
+  article7 {
+    background: orange;
+  }
+}
+/* 최대너비가 0-400이하일 때 배경색 */
+@media screen and (max-width: 400px) {
+  article7 {
+    background: aqua;
+  }
+}
