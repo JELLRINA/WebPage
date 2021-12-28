@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* 1 */
+#wrap {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    padding: 100px;
+    box-sizing: border-box;
+}
