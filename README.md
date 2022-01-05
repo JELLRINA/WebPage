@@ -29,7 +29,7 @@
 
 <p align="center">
   
-https://user-images.githubusercontent.com/88649457/148247297-ccb0ccb5-5edf-44b9-821d-93293f03ca64.mp4
+<img src = https://user-images.githubusercontent.com/88649457/148256366-bf70a70f-8996-4c2c-bac2-b99475ce50b0.mp4>
 
 </p>
 
