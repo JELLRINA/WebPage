@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* css 초기화 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: 0;
+}
+/* 1 */
+figure {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(25deg, violet, lightblue);
+}
+figure h1 {
+    position: absolute;
+    top: 7vh;
+    left: 4vw;
+    font-size: 0;
+}
+figure h1 strong {
+    font: bold 36px "arial";
+    color: #fff;
+    line-height: 1.4;
+    /* 폰트 늘리기 */
+    letter-spacing: 5px;
+}
+figure h1 span {
+    font: 12px "arial";
+    color: #fff;
+    opacity: 0.8;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+figure .menu {
+    position: absolute;
+    top: 8vh;
+    right: 4vw;
+    font-size: 24px;
+    color: #fff;
+}
+figure > p {
+    position: absolute;
+    bottom: 7vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font: 12px/1 "arial";
+    color: #fff;
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+/* 2 */
+/* 플레이어 패널 프레임 그룹 */
+figure section {
+    width: 20vw;
+    height: 65vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -32vh;
+    margin-left: -10vw;
+    border: 1px solid aquamarine;
+}
+/* 개별 플레이어 패널 */
+figure section article {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+figure section article .inner {
+    width: 100%;
+    height: 100%;
+    background: #f0f7ff;
+    padding: 5vh 2.5vw 8vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    opacity: .6;
+    transform: scale(.8);
+}
