@@ -70,6 +70,8 @@ figure section {
     margin-top: -25vh;
     margin-left: -10vw;
     /* border: 1px solid aquamarine; */
+    /* 5 */
+    transition: 1s;
 }
 /* 개별 플레이어 패널 */
 figure section article {
@@ -150,4 +152,183 @@ figure section article .inner .pic .dot {
     position: relative;
     z-index: 3;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 3 */
+/* 음악 정보 및 컨트롤 버튼 */
+figure section article .inner .txt {
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+figure section article .inner .txt h2 {
+    font: bold 20px "arial";
+    color: #222;
+    margin-bottom: 2vh;
+}
+figure section article .inner .txt p {
+    font-size: 12px;
+    margin-bottom: 3vh;
+    color: #777;
+}
+figure section article .inner .txt ul {
+    /* 나란히 정렬 */
+    display: flex;
+    justify-content: space-around;
+}
+figure section article .inner .txt ul li {
+    cursor: pointer;
+    opacity: .6;
+    transition: .5s;
+}
+figure section article .inner .txt ul li.paly {
+    transform: scale(1.5);
+    opacity: .9;
+}
+figure section article .inner .txt ul li:hover {
+    /* 좌우 버튼 마우스 호버 시 1.5배로 확대 및 투명도 */
+    transform: scale(1.5);
+    opacity: .8;
+}
+figure section article .inner .txt ul li.paly:hover {
+    /* play 버튼 호버 시 2배 확대 및 투명도 */
+    transform: scale(2);
+    opacity: 1;
+}
+
+/* 4 */
+/* 컨트롤 패널 버튼으로 음악 재생 및 정지 */
+/* 앨범 커버 이미지 회전 키프레임 */
+@keyframes ani {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* 앨범 커버 그림자 회전 키프레임 */
+@keyframes ani2 {
+    0% {
+        transform: translateY(10%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(10%) rotate(360deg);
+    }
+}
+figure section article .inner .pic.on::after {
+    animation: ani 4s linear infinite;
+}
+figure section article .inner .pic.on::before {
+    animation: ani2 4s linear infinite;
+}
+
+/* 5 */
+/* 좌우 버튼 클릭 시 패널 회전 시키기 */
+figure .btnPrev {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20vw, -50vw);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+}
+figure .btnPrev span {
+    font: 11px/1 "arial";
+    color: #fff;
+    opacity: 1;
+    transform: translateX(30%);
+    transition: .5s;
+}
+figure .btnPrev::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform-origin: left center;
+    transform: rotate(-180deg);
+    transition: .5s;
+}
+figure .btnPrev::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform-origin: left center;
+    transform: rotate(180deg);
+    transition: .5s;
+}
+figure .btnPrev:hover span {
+    opacity: 0;
+    transform: translateX(100%);
+}
+figure .btnPrev:hover::before {
+    transform: rotate(-30deg);
+}
+figure .btnPrev:hover::after {
+    transform: rotate(30deg);
+}
+
+figure .btnNext {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(20vw, -50vw);
+    display: flex;
+    align-items: center;
+    text-align: right;
+    cursor: pointer;
+}
+figure .btnNext span {
+    font: 11px/1 "arial";
+    color: #fff;
+    opacity: 1;
+    transform: translateX(-30%);
+    transition: .5s;
+}
+figure .btnNext::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform-origin: right center;
+    transform: rotate(180deg);
+    transition: .5s;
+}
+figure .btnNext::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform-origin: right center;
+    transform: rotate(-180deg);
+    transition: .5s;
+}
+figure .btnNext:hover span {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+figure .btnNext:hover::before {
+    transform: rotate(30deg);
+}
+figure .btnNext:hover::after {
+    transform: rotate(-30deg);
 }
