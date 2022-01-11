@@ -41,3 +41,11 @@ https://user-images.githubusercontent.com/88649457/148429600-d328462a-dfbb-4491-
 
 </p>
 
+## practice #6
+
+
+https://user-images.githubusercontent.com/88649457/148835615-b70e0191-a26c-4981-a579-b620ae1083b2.mp4
+
+
+
+
