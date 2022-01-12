@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* 1 */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    background: lightcyan;
+}
+section {
+    width: 100%;
+    border: 10px solid blue;
+    box-sizing: border-box;
+    display: flex;
+     /*세로값
+     브라우저 창을 줄이면 여백이 없어짐*/
+    flex-direction: column; 
+}
+section article {
+    width: 100px;
+    height: 100px;
+    background: aqua;
+    border: 1px solid #000;
+}
+
+/* 2 */
+section2 {
+    width: 100%;
+    border: 10px solid blue;
+    box-sizing: border-box;
+    display: flex;
+    /* wrap :너비값 유지되면서 줄 바꿈 
+    flex-direction: row; 
+    flex-wrap: wrap; */
+    
+    /* direction과 wrap의 축약문 */
+    flex-flow: row wrap;
+}
+section2 article {
+    width: 100px;
+    height: 100px;
+    background: aqua;
+    border: 1px solid #000;
+}
+

@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+/* 1 */
+/* 테두리와 크기 지정 */
+section {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  float: left;
+  margin: 50px;
+}
+/* 테두리 안 속성 및 투명도*/
+section article {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: 0.3;
+}
+/* 1.3배 확대 */
+section:nth-of-type(1) article {
+  transform: scale(1.3);
+}
+/* x축 20도만큼 비틈 */
+section:nth-of-type(2) article {
+  transform: skewX(20deg);
+}
+/* 50px만큼 오른쪽으로 이동 */
+section:nth-of-type(3) article {
+  transform: translateX(50px);
+}
+/* 45도 회전 */
+section:nth-of-type(4) article {
+  transform: rotate(45deg);
+}
+
+/* 2 */
+section2 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  float: left;
+  margin: 50px;
+  perspective: 400px; /* 원근감 지정 */
+}
+section2 article {
+  width: 100%;
+  height: 100%;
+  background: blueviolet;
+  opacity: 0.3;
+}
+section2:nth-of-type(1) article {
+  transform: rotateX(45deg);
+}
+section2:nth-of-type(2) article {
+  transform: rotateY(45deg);
+}
+section2:nth-of-type(3) article {
+  transform: translateZ(100px);
+}
+section2:nth-of-type(4) article {
+  transform: translateZ(-100px);
+}
+
+/* 3 */
+section3 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  float: left;
+  margin: 100px;
+  perspective: 600px;
+}
+section3 article {
+  width: 100%;
+  height: 100%;
+  background: lightcoral;
+  opacity: 0.3;
+}
+section3:nth-of-type(1) article {
+  transform: rotateY(120deg);
+  transform-origin: left center;
+}
+section3:nth-of-type(2) article {
+  transform: rotateY(120deg);
+  transform-origin: right bottom;
+}
+
+/* 4 */
+section4 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  float: left;
+  margin: 50px;
+  perspective: 400px;
+}
+/* section4 article {
+    width: 100%;
+    height: 100%;
+    background: palevioletred;
+    opacity: .3;
+    transform: rotateY(0deg);
+    transition-property: transform opacity;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(.46, -.64, .58, 1.39);
+} */
+/* 위의 방식을 간단히 정리 */
+section4 article {
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+  opacity: 0.3;
+  transform: rotateY(0deg);
+  transition: all 1s cubic-bezier(0.45, -0.64, 0.58, 1.39) 0s;
+}
+section4:hover article {
+  transform: rotateY(45deg);
+  background: blueviolet;
+}
+
+/* 5 */
+/* 애니메이션  시작과 끝 지정 */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* article5 {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  float: left;
+  margin: 100px;
+  animation-name: rotation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-play-state: running;
+  transform: rotate(50deg);
+} */
+/* 위의 방식을 간단히 정리 */
+article5 {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  float: left;
+  margin: 100px;
+  animation: rotation 2s linear 0s infinite;
+  animation-play-state: running;
+  transform: rotate(50deg);
+}
+
+article5:hover {
+  animation-play-state: paused;
+}
+
+/* 6 */
+img {
+  width: 400px;
+  margin: 50px;
+}
+/* svg 코드 붙여넣기 */
+article6-1 {
+  width: 500px;
+  border: 1px solid #000;
+  float: left;
+  box-sizing: border-box;
+  padding: 50px;
+  margin: 50px auto;
+}
+article6-1 svg {
+  width: 100%;
+}
+/* 배경속성 채우기 */
+article6-1 svg path {
+  fill: transparent;
+  stroke: blueviolet;
+  stroke-width: 5;
+}
+
+/* stroke dash 가시영역 모션*/
+article6-2 {
+  width: 500px;
+  border: 1px solid #000;
+  float: left;
+  box-sizing: border-box;
+  padding: 50px;
+  margin: 50px auto;
+}
+article6-2 svg {
+  width: 100%;
+}
+/* 마우스 포인터를 올렸을 때 3초동안 모션 효과 */
+article6-2 svg path {
+  fill: transparent;
+  stroke: lightblue;
+  stroke-width: 2;
+  stroke-dasharray: 1267;
+  stroke-dashoffset: -1267;
+  transition: all 3s;
+}
+article6-2:hover svg path {
+  stroke-dashoffset: 0;
+}
+
+/* 7 */
+article7 {
+  width: 200px;
+  height: 200px;
+  float: left;
+  background: pink;
+  margin: 100px auto;
+}
+/* 최대너비가 401-900이하일 때 배경색 */
+@media screen and (max-width: 900px) {
+  article7 {
+    background: orange;
+  }
+}
+/* 최대너비가 0-400이하일 때 배경색 */
+@media screen and (max-width: 400px) {
+  article7 {
+    background: aqua;
+  }
+}
